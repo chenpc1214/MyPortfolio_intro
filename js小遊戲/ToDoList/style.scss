@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Noto Sans HK', sans-serif;
+}
+
+i{
+    pointer-events: none;   //針對按鈕內嵌，innerhtml標籤所做的事情
+}
+
+body{
+    background:linear-gradient(90deg , rgb(255, 104, 84),rgb(255, 232, 100));
+}
+
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: black;
+        font-size: 4rem;
+
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+
+    input,button{
+        border: none;
+        padding: 1rem 1 1rem;
+        font-size: 2rem;
+        margin: 0.5rem;
+        color: black;
+    }
+
+    input[type=number]{
+        width: 70px;
+        text-align: center;
+        outline: none;
+        
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    button{
+        cursor:pointer;
+        background-color:rgb(0,146,114);
+        border-radius: 10%;
+        padding-left: 10px;
+        padding-right:10px ;
+    }
+}
+
+section{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 15px;
+
+    div.todo{
+        width: 30vw;
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        text-align: center;
+        margin: 0.25rem 0rem;
+        transition: all .5s ease;
+
+        p{
+            background:#ffff;
+            color: black;
+            padding:0.25rem 1rem;
+        }
+
+        p.thing{
+            width:100%;
+        }
+
+        p.day{
+            width:20%;
+            text-align: center;
+        }
+
+        button{
+            padding: 0.25rem 1rem;
+            font-size: 1.75rem;
+            border: none;
+            cursor: pointer;
+            color: white;
+            outline: none;
+        }
+
+        button.ok{
+            background: rgb(56, 240, 10);
+        }
+        
+        button.trash{
+            background: red;
+        }
+
+
+    }
+
+}
+
+.done{
+
+    opacity: 0.5;
+    text-decoration: line-through;
+    text-decoration-thickness: 0.3rem;
+
+}
+
+div.sort{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+
+        cursor:pointer;
+        background-color:rgb(160, 255, 6);
+        border-radius: 10%;
+        padding-left: 10px;
+        padding-right:10px ;
+        color: black;
+        font-size: 2rem;
+        border: none;
+        margin:1.5rem 0rem;
+        outline: none;
+        width: 20%;
+    }
+}
+
+@keyframes scaleup{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes scaledown{
+    to{
+        transform: scale(0);
+    }
+}

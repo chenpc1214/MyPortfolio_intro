@@ -1,0 +1,65 @@
+body
+{
+    margin: 0;
+    background-image:linear-gradient(#e66465, #9198e5);
+    overflow-y: hidden;
+}
+
+.night
+{
+    height:80vh ;
+    width: 70vw;
+    border: 1px solid black;
+    margin: 5rem auto;
+    background:url(./assets/Img_1.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0);
+    overflow-x: hidden;
+
+}
+
+.surface
+{
+    height: 140px;
+    width:500%;
+    background:url(./assets/Img_02.png);
+    display:block;
+    position: absolute;
+    bottom: 0%;
+    left:0%;
+    background-repeat: repeat-x;
+    
+}
+
+.car
+{
+    position:absolute;
+    bottom: 8%;
+    left: 24%;
+    
+}
+
+/*動畫動作*/
+
+@keyframes moveright
+{
+    100%{transform: translateX(-2950px);}
+}
+
+@keyframes suspension
+{
+    100%{transform: translateY(-1px);}
+    50%{transform: translateY(2px);}
+    0%{transform: translateY(-1px);}
+}
+
+.moveright
+{
+    animation: moveright 6s linear infinite; /*for js*/
+}
+
+.suspension
+{
+    animation: suspension 1s linear infinite; /*for css*/
+}
